@@ -1,5 +1,5 @@
 ### json-utility
-A utility to read, update, write, delete keys in a .json file.
+A utility to import json read, update, write, delete keys in a .json file and export as csv, json.
 
 Steps to make it work:
 * Import a `csv` dataset.
