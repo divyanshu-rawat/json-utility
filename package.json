@@ -6,10 +6,15 @@
   "scripts": {
     "start": "node app.js"
   },
-  "keywords": ["read","write","update"],
+  "keywords": [
+    "read",
+    "write",
+    "update"
+  ],
   "author": "divyanshu-rawat",
   "license": "MIT",
   "devDependencies": {
-    "load-json-file": "^5.1.0"
+    "load-json-file": "^5.1.0",
+    "promisify-node": "^0.5.0"
   }
 }

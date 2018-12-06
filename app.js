@@ -1,20 +1,36 @@
-const loadJsonFile = require('load-json-file');
-const fs = require('fs');
+const promisify = require("promisify-node");
+const promisifyloadJsonFile = promisify("load-json-file");
+var fs = promisify("fs");
 
-loadJsonFile('data.json').then(json => {
+promisifyloadJsonFile("data.json")
+   .then(json => {
+      for (let j = 0; j < json.length; j++) {
+         json[j].location = {
+            lat: json[j].Latitude,
+            lang: json[j].Longitude
+         };
+      }
+      return json;
+   })
+   .then(json => {
+      for (let j = 0; j < json.length; j++) {
+         json[j].location = {
+            lat: json[j].Latitude,
+            lang: json[j].Longitude
+         };
+         delete json[j]["Latitude"];
+         delete json[j]["Longitude"];
+      }
 
-    for (let j = 0; j < json.length; j++) {
-        json[j].location = {
-            'lat': json[j].Latitude,
-            'lang': json[j].Longitude
-        }
-    }
-    fs.writeFile("./object.json", JSON.stringify(json, null, 4), (err) => {
-        if (err) {
+      return json;
+   })
+   .then(json => {
+      fs.writeFile("./object.json", JSON.stringify(json, null, 4), err => {
+         if (err) {
             console.error(err);
             return;
-        };
-        console.log("File Created");
-    });
-
-});
+         }
+      }).then(function() {
+         console.log("Hurray! Operation Completed");
+      });
+   });
