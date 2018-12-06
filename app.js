@@ -11,15 +11,6 @@ csv()
             lat: json[j].Latitude,
             lang: json[j].Longitude
          };
-      }
-      return json;
-   })
-   .then(json => {
-      for (let j = 0; j < json.length; j++) {
-         json[j].location = {
-            lat: json[j].Latitude,
-            lang: json[j].Longitude
-         };
          delete json[j]["Latitude"];
          delete json[j]["Longitude"];
       }
