@@ -1,14 +1,14 @@
 {
   "name": "json-modifier",
   "version": "1.0.0",
-  "description": "",
+  "description": "A utility to read, update, write a .json file",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["read","write","update"],
+  "author": "divyanshu-rawat",
+  "license": "MIT",
   "devDependencies": {
     "load-json-file": "^5.1.0"
   }
