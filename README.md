@@ -1,6 +1,12 @@
 ### json-utility
 A utility to read, update, write, delete keys in a .json file.
 
+Steps to make it work:
+* Import a `csv` dataset.
+* Specify what keys to add.
+* Specify what keys to delete.
+* Then app will write the modified json to `jsonOutput` and modified csv to `csvOutput` folder.
+
 Perform operation on sample dataset to get more insights `data.json`
 
 Built by leveraging power of `promisify`, `fs`, `load-json-file` modules.
@@ -11,4 +17,4 @@ Built by leveraging power of `promisify`, `fs`, `load-json-file` modules.
 
 
 
-![alt tag](https://imgur.com/wZzskOo.gif)
+![alt tag](https://imgur.com/oyYHzz6)
