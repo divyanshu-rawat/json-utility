@@ -17,4 +17,4 @@ Built by leveraging power of `promisify`, `fs`, `load-json-file` modules.
 
 
 
-![alt tag](https://imgur.com/oyYHzz6)
+![alt tag](https://imgur.com/oyYHzz6.gif)
